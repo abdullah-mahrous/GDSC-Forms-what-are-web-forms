@@ -1,0 +1,22 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form
+{
+    margin: 20px;
+    padding: 50px;
+    background-color: #eee;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+form * 
+{
+    margin-bottom: 15px;
+}
+

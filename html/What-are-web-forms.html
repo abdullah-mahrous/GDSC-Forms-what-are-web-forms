@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/GDSC-Logo.png"/>
+    <link rel="stylesheet" href="../css/What-are-web-forms.css"/>
+    <title>What are web forms</title>
+</head>
+<body>
+        
+        <!--From a user experience (UX) point of view, it's important to remember that the bigger your form, the more you risk frustrating people and losing users-->
+        
+        <!--It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave in an unpredictable manner, so it is a bad idea-->
+
+        <!--#######################################################################################################################-->
+           
+        <!--It's a container element like a <section> or <footer> element-->
+
+        <!--The action attribute defines the location (URL) where the form's collected data should be sent when it is submitted-->
+
+        <!--The method attribute defines which HTTP method to send the data with (usually get or post)-->
+
+        <!--target is which window (or tab, frame, iframe) to use for the request-->
+
+        <form action="handling-user-data.php" method="get" target="_blank" id="myForm">
+           
+            <!--using label enables mouse, trackpad, and touch device users to click on the label to activate the corresponding control, and it also provides an accessible name for screen readers to read out to their users-->
+
+            <label for="name">Name:</label>
+
+            <!--name="user_name" is what the backend access the the element by-->
+
+            <!--attributes : disabled , pattern	,readonly , required , value ,  maxlength ,  minlength , spellcheck , autofocus-->
+
+            <input type="text" id="name" name="user_name" />
+            
+            <!-- wrap : Specifies how the control wraps text. The values are soft (the default value), which means the text submitted is not wrapped but the text rendered by the browser is wrapped; hard (the cols attribute must be specified when using this value), which means both the submitted and rendered texts are wrapped, and off, which stops wrapping-->
+
+            <textarea placeholder="multiline inpute" cols="20" wrap="hard" rows="5"></textarea> 
+
+            <input type="image" src="../assets/GDSC-Logo.png" height="100" width="100"/>  
+
+            <input type="file" multiple accept="image/*"/>  
+
+            <!--When accessed via a touch device with a dynamic keyboard, most devices will display a numeric keypad when type="tel" is encountered-->
+            
+            <input type="tel" placeholder="enter your phone number"/>  
+            
+            <input type="number" placeholder="enter any number" step="0.5"/>
+
+            <!--It adds special validation constraints to the field. The browser will report an error if no protocol (such as http:) is entered, or if the URL is otherwise malformed. On devices with dynamic keyboards, the default keyboard will often display some or all of the colon, period, and forward slash as default keys-->
+            
+            <input type="url" placeholder="enter any url"/>  
+            
+            <input type="range" min="5000" max="500000" step="1000"/>  
+
+            <!--In the case of multiple choice select boxes, you'll notice that the select box no longer displays the values as drop-down content — instead, all values are displayed at once in a list, with the optional size attribute determining the height of the widget-->
+            
+            <select multiple>
+                <option value="Abdullah">Abdullah</option>
+                <option value="Mohamed" >Mohamed</option>
+                <option value="Ahmed">Ahmed</option>
+            </select>  
+            
+            <input type="text" list="techCompanies"/>
+            
+            <datalist id="techCompanies">
+                <option>Apple</option>
+                <option>Microsoft</option>
+                <option>Amazon</option>
+                <option>IMB</option>
+                <option>Google</option>
+                <option>Facebook</option>
+            </datalist>  
+            
+            <input type="submit" />
+    
+        </form> 
+    
+        <div>   
+    
+            <input type="password" form="myForm" name="password"/>  
+
+        </div>
+
+    </body>
+</html>
